@@ -1,5 +1,3 @@
-/*---The Program Author: 李章---*/
-
 /*---------包含的头文件---------*/
 #include<stdio.h>
 #include<string.h>
