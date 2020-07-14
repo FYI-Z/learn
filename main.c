@@ -1,36 +1,43 @@
 #include"function.h"
 int main()
 {
-	int choose;		//ÓÃ»§ÃüÁî
+	int choose;		//ç”¨æˆ·å‘½ä»¤
 	DuLinkList L;
-	InitDuLinkList(&L);			//³õÊ¼»¯Ë«ÏòÁ´±í
+	InitDuLinkList(&L);			//åˆå§‹åŒ–åŒå‘é“¾è¡¨
 
-	read(&L);			//¶ÁÈ¡Ö°¹¤¹¤×ÊÊı¾İ
+	read(&L);			//è¯»å–èŒå·¥å·¥èµ„æ•°æ®
 	while(1)
 	{
 		printf("***********************************\n");
-		printf("****          »¶Ó­Ê¹ÓÃ         ****\n");
-		printf("****      Ö°¹¤¹¤×Ê¹ÜÀíÏµÍ³     ****\n");
-		printf("****         ²éÑ¯ÇëÊäÈë1       ****\n");
-		printf("****         ĞŞ¸ÄÇëÊäÈë2       ****\n");
-		printf("****         Ìí¼ÓÇëÊäÈë3       ****\n");
-		printf("****         É¾³ıÇëÊäÈë4       ****\n");
-		printf("****         ±£´æÇëÊäÈë5       ****\n");
-		printf("****         ä¯ÀÀÇëÊäÈë6       ****\n");
-		printf("****         ÍË³öÇëÊäÈë7       ****\n");
+		printf("****          æ¬¢è¿ä½¿ç”¨         ****\n");
+		printf("****      èŒå·¥å·¥èµ„ç®¡ç†ç³»ç»Ÿ     ****\n");
+		printf("****         æŸ¥è¯¢è¯·è¾“å…¥1       ****\n");
+		printf("****         ä¿®æ”¹è¯·è¾“å…¥2       ****\n");
+		printf("****         æ·»åŠ è¯·è¾“å…¥3       ****\n");
+		printf("****         åˆ é™¤è¯·è¾“å…¥4       ****\n");
+		printf("****         ä¿å­˜è¯·è¾“å…¥5       ****\n");
+		printf("****         æµè§ˆè¯·è¾“å…¥6       ****\n");
+		printf("****         é€€å‡ºè¯·è¾“å…¥7       ****\n");
 		printf("***********************************\n");
-		printf("ÇëÊäÈëÄúµÄÑ¡Ôñ£º");
-		scanf("%d",&choose);
-		switch(choose)
+		printf("è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š");
+		if(scanf("%d",&choose) != 1)		//è¾“å…¥çš„æ•°æ®ä¸æ˜¯æ•´å½¢
 		{
-		case 1:find(&L);break;
-		case 2:modify(&L);break;
-		case 3:add(&L);break;
-		case 4:del(&L);break;
-		case 5:write(&L);break;
-		case 6:list(&L);break;
-		case 7:printf("¸ĞĞ»ÄúµÄÊ¹ÓÃ£¡\n");system("pause");return 0;
-		default:printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈëÄúÑ¡Ôñ£¡\n");break;
+			while ((getchar()) != '\n');			//æ¸…é™¤ç¼“å­˜åŒº
+			printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥æ‚¨é€‰æ‹©ï¼\n");
+		}
+		else
+		{
+			switch(choose)
+			{
+			case 1:find(&L);break;
+			case 2:modify(&L);break;
+			case 3:add(&L);break;
+			case 4:del(&L);break;
+			case 5:write(&L);break;
+			case 6:list(&L);break;
+			case 7:printf("æ„Ÿè°¢æ‚¨çš„ä½¿ç”¨ï¼\n");system("pause");return 0;
+			default:printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥æ‚¨é€‰æ‹©ï¼\n");break;
+			}
 		}
 	}
 }
